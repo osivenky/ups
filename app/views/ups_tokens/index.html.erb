@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ups tokens</h1>
+
+<div id="ups_tokens">
+  <% @ups_tokens.each do |ups_token| %>
+    <%= render ups_token %>
+    <p>
+      <%= link_to "Show this ups token", ups_token %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ups token", new_ups_token_path %>

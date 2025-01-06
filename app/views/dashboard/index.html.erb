@@ -1,0 +1,8 @@
+<h1>Welcome, <%= current_user.email %>!</h1>
+
+<% if @ups_connected %>
+  <p>Your UPS account is connected.</p>
+  <p>Your API Key: <%= @api_key %></p>
+<% else %>
+  <p>Your UPS account is not yet connected. <a href="<%= connect_ups_path %>">Connect now</a></p>
+<% end %>

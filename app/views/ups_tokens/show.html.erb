@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ups_token %>
+
+<div>
+  <%= link_to "Edit this ups token", edit_ups_token_path(@ups_token) %> |
+  <%= link_to "Back to ups tokens", ups_tokens_path %>
+
+  <%= button_to "Destroy this ups token", @ups_token, method: :delete %>
+</div>

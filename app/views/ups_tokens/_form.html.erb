@@ -1,0 +1,37 @@
+<%= form_with(model: ups_token) do |form| %>
+  <% if ups_token.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ups_token.errors.count, "error") %> prohibited this ups_token from being saved:</h2>
+
+      <ul>
+        <% ups_token.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :access_token, style: "display: block" %>
+    <%= form.text_field :access_token %>
+  </div>
+
+  <div>
+    <%= form.label :refresh_token, style: "display: block" %>
+    <%= form.text_field :refresh_token %>
+  </div>
+
+  <div>
+    <%= form.label :expires_at, style: "display: block" %>
+    <%= form.datetime_field :expires_at %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
